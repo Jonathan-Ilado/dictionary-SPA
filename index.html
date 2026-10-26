@@ -1,0 +1,95 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Search for word definitions, synonyms, and pronunciations."
+    >
+
+    <title>WordWise | Online Dictionary</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="logo" href="#" aria-label="WordWise home">
+            WordWise<span>.</span>
+        </a>
+        <p>Your words, explained.</p>
+    </header>
+
+    <main class="container">
+        <section class="search-section" aria-labelledby="page-title">
+            <h1 id="page-title">Discover a word</h1>
+
+            <p class="intro">
+                Find definitions, synonyms, and pronunciations
+                for any English word.
+            </p>
+
+            <form id="search-form" role="search">
+                <label for="word-input">Enter an English word</label>
+
+                <div class="search-bar">
+                    <input
+                        type="search"
+                        id="word-input"
+                        name="word"
+                        placeholder="Try 'beautiful'..."
+                        autocomplete="off"
+                        aria-label="Enter a word to look up"
+                        required
+                    >
+
+                    <button type="submit" id="search-button">
+                        Search
+                    </button>
+                </div>
+            </form>
+
+            <p id="loading-message" role="status" hidden>
+                Searching the dictionary...
+            </p>
+
+            <p
+                id="error-message"
+                class="error-message"
+                role="alert"
+                hidden
+            ></p>
+        </section>
+
+        <section
+            id="results"
+            class="results"
+            aria-label="Dictionary results"
+            aria-live="polite"
+            aria-busy="false"
+            hidden
+        >
+            <div class="word-heading">
+                <div>
+                    <p class="eyebrow">WORD</p>
+                    <h2 id="word-title"></h2>
+                    <p id="phonetic" class="phonetic"></p>
+                </div>
+
+                <div id="audio-container"></div>
+            </div>
+
+            <div id="definitions-container"></div>
+        </section>
+
+        <footer class="site-footer">
+            <p>WordWise &copy; 2026 | Powered by Free Dictionary API</p>
+        </footer>
+    </main>
+</body>
+</html>
+```
